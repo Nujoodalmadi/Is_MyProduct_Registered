@@ -3,7 +3,11 @@
   margin-top: 10px;
   min-width: 250px;
   font-size: 10px;
+  align-content: center !important;
+}
+.search {
   align-content: center;
+  align-items: center;
 }
 
 button#load {
@@ -25,7 +29,18 @@ button#load {
   display: block;
 }
 
+.form-control {
+  margin-bottom: 15px;
+}
 #loader-img {
   margin: 0 auto;
   display: block;
+}
+
+#reportForm {
+  padding: 25px;
+}
+
+button {
+  min-width: 150px;
 }
