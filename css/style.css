@@ -1,9 +1,12 @@
 .fdb-box {
-  height: 500px;
+  height: 400px;
   margin-top: 10px;
-  min-width: 250px;
+  min-width: 200px;
   font-size: 10px;
   align-content: center !important;
+}
+.card {
+  padding-top: 20px !important;
 }
 .search {
   align-content: center;
@@ -28,9 +31,21 @@ button#load {
   margin: 20px auto;
   display: block;
 }
+a {
+  text-decoration: none !important;
+}
+
+button {
+  min-width: 150px;
+}
 
 .form-control {
   margin-bottom: 15px;
+}
+
+.productDetails {
+  text-align: left;
+  margin-top: 10px;
 }
 #loader-img {
   margin: 0 auto;
@@ -41,6 +56,16 @@ button#load {
   padding: 25px;
 }
 
-button {
-  min-width: 150px;
+#productName {
+  font-size: 12px;
+}
+#brandName {
+  font-size: 11px;
+}
+#report {
+  color: white;
+}
+
+.close-modal {
+  background-image: none !important;
 }

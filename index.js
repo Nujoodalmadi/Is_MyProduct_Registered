@@ -5,7 +5,7 @@ $(document).ready(function() {
     //get data url from the clicked button's data-url attribute
     var url = $(this).attr("data-url");
 
-    //append loading icon, which will be removed after ajax we get ajax response
+    //append loading icon, which will be removed after we get ajax response
     $("button").append('<i class="fa fa-circle-o-notch fa-spin"></i>');
 
     //Ajax call with url obtained from button attribute
@@ -33,7 +33,7 @@ $(document).ready(function() {
 
         //show message "nothing found" if search result == 0
         if (filteredData.length === 0) {
-          $("#products").append(`<h1>nothing</h1>`);
+          $("#products").append(`<h1>Nothing matching your search</h1>`);
         }
 
         //if search result != 0, show hidden HTML section and append the products in that section
@@ -42,20 +42,27 @@ $(document).ready(function() {
           $("#products").append(`
 
         <div id="product" class="paged-element m-sm-auto col-sm-2 col-12 col-sm-10 col-md-8 col-lg-7 col-xl-3 m-auto pt-5 pt-xl-0">
-          <div class="fdb-box fdb-touch">
-            <h4>${product.ProductEnName}</h4>
-            <h4>${product.ProductArName}</h4>
-            <h4>Brand: ${product.BrandName}</h4>
-            <p>Listed Name: ${product.ProductArName}</p>
-            <p>Country: ${product.CounrtyEn}</p>
-            <p>Volume: ${product.PackageVolume}</p>
-            <p>Manufacturer: ${product.manufactureenglishname}</p>
-            <p># ${product.ProductNumber}</p>
-          
-          <a id=${product.ProductNumber} href="#login-form" rel="modal:open">Report this product</a>
+          <div class="fdb-box  fdb-touch">
+            <h4 id="productName">${product.ProductEnName}</h4>
+            <h4 id="productName">${product.ProductArName}</h4>
+            <h4 id="brandName">Brand:   ${product.BrandName}</h4>
+            <div class="productDetails">
+            <p>Listed Name:   ${product.ProductArName}</p>
+            <p>Country:   ${product.CounrtyEn}</p>
+            <p>Volume:   ${product.PackageVolume}</p>
+            <p>Manufacturer:   ${product.manufactureenglishname}</p>
+            <p>Product No.   ${product.ProductNumber}</p>
+            </div>
+          <a id=${product.ProductNumber} href="#login-form" rel="modal:open">REPORT</a>
           </div>
         </div>
    `)
+        );
+
+        //scroll down to search result
+        $("html,body").animate(
+          { scrollTop: $("#products").offset().top },
+          "slow"
         );
         //remove loading icon
         $("i").remove();
