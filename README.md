@@ -15,7 +15,7 @@ The purpose of this project is to provide a search engine for Saudi Food and Dru
 
 This project is a search engine for SFDA registered products. In the text field, a user is able to enter the name of a certain product belonging to one of four different categories (I.e. oral hygiene, nails and cuticles, hair and scalp, and skin).
 
-## This project uses:
+## This project uses
 
 - JQuery
 
@@ -34,3 +34,7 @@ This project is a search engine for SFDA registered products. In the text field,
 ```
 
 - Bootstrap , Font-awesome , and Google-fonts
+
+## Resources
+
+- [Saudi Open Data Portal ](https://www.data.gov.sa/Data/en/dataset?q=sfda)
