@@ -5,8 +5,10 @@ $(document).ready(function() {
     //get data url from the clicked button's data-url attribute
     var url = $(this).attr("data-url");
 
-    //append loading icon, which will be removed after we get ajax response
-    $("button").append('<i class="fa fa-circle-o-notch fa-spin"></i>');
+    //append loading icon and disable buttons
+    $("button")
+      .append('<i class="fa fa-circle-o-notch fa-spin"></i>')
+      .prop("disabled", true);
 
     //Ajax call with url obtained from button attribute
     $.ajax({
@@ -30,7 +32,7 @@ $(document).ready(function() {
 
         //show message "nothing found" if search result == 0
         if (filteredData.length === 0) {
-          $("#products").append(`<h1>Nothing matching your search</h1>`);
+          $("#products").append(`<h1>Nothing matches your search</h1>`);
         }
 
         //if search result != 0, show hidden HTML section and append the products in that section
