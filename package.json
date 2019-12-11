@@ -1,7 +1,7 @@
 {
   "name": "GA_FINAL",
   "version": "1.0.0",
-  "description": "",
+  "description": "> Search for Registered Personal-Care Products",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,5 @@
     "url": "https://github.com/Nujoodalmadi/GA_Final_Project/issues"
   },
   "homepage": "https://github.com/Nujoodalmadi/GA_Final_Project#readme",
-  "dependencies": {
-    "jquery-lazy": "^1.7.10"
-  }
+  "dependencies": {}
 }

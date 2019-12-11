@@ -38,3 +38,7 @@ This project is a search engine for SFDA registered products. In the text field,
 ## Resources
 
 - [Saudi Open Data Portal ](https://www.data.gov.sa/Data/en/dataset?q=sfda)
+
+## Disclaimer
+
+THIS IS NOT AN SFDA PRODUCT. THE LOGO WAS USED FOR DEMONSTRATION PURPOSES ONLY.

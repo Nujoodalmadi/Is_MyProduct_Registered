@@ -69,3 +69,16 @@ button {
 .close-modal {
   background-image: none !important;
 }
+
+textarea.invalid {
+  border: 2px solid red;
+}
+
+textarea.valid {
+  border: 2px solid green;
+}
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}

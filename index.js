@@ -13,12 +13,9 @@ $(document).ready(function() {
       type: "GET",
       cache: true,
       url: url,
-      beforeSend: function(xhr) {
-        xhr.setRequestHeader(
-          "X-CKAN-API-Key",
-          "f358fc15-8983-4a77-a5f7-ada7d1069a4e"
-        );
-      },
+      // beforeSend: function(xhr) {
+      //   xhr.setRequestHeader("X-CKAN-API-Key", api_key);
+      // },
       success: function(data) {
         var search = $("input").val();
         $("input").val("");
@@ -98,7 +95,20 @@ $(document).ready(function() {
     });
   }
 
-  //empty report input box after submitting the form
+  // input validation
+  $("#reportInput").on("input", function() {
+    var input = $(this);
+    var is_filled = input.val();
+    if (is_filled) {
+      input.removeClass("invalid").addClass("valid");
+      $("#report").removeClass("disabled");
+    } else {
+      input.removeClass("valid").addClass("invalid");
+      $("#report").addClass("disabled");
+    }
+  });
+
+  //empty report input box after submitting the form. This is just a "place holder". It should be replaced with an ajax request to POST the message.
   $("#report").click(function() {
     $("#reportInput").val("");
   });

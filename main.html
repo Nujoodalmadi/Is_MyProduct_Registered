@@ -112,7 +112,7 @@
       </section>
     </div>
     <!-- END OF HEADER -->
-    <!-- MODAL -->
+    <!-- REPORT MODAL -->
     <form id="login-form" class="modal">
       <section class="fdb-block bg-gray">
         <div class="container">
@@ -122,15 +122,15 @@
                 The SFDA wants your help in reporting any adverse reactions or other problems with products it regulates.
             </p>
             <div class="input-group">
-              <input
+              <textarea
                 id="reportInput"
                 type="text"
                 class="form-control"
                 placeholder="Describe your allergic reaction"
-              />
+              ></textarea>
               <div class="input-group-append">
                 <button class="btn btn-primary" type="button">
-                  <a id="report" href="#close-modal" rel="modal:close"
+                  <a class="disabled" id="report" href="#success-message" rel="modal:open"
                     >Report</a>
                 </button>
               </div>
@@ -139,7 +139,21 @@
         </div>
       </section>
     </form>
-    <!-- END OF MODAL -->
+    <!-- END OF REPORT MODAL -->
+     <!-- MESSAGE MODAL -->
+     <form id="success-message" class="modal">
+      <section class="fdb-block">
+        <div class="container">
+          <div id="reportForm" class="row justify-content-center">
+            <img alt="image" height="40" src="src/sfda.png" />
+            <p class="lead">
+              Thank you! Your message has been successfully sent
+            </p>
+              </div>
+            </div>
+      </section>
+    </form>
+     <!-- END OF MESSAGE MODAL -->
     <!-- PRODUCT CARDS -->
     <section
       hidden
