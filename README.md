@@ -33,4 +33,4 @@ This project is a search engine for SFDA registered products. In the text field,
     />
 ```
 
-- Bootstrap and Font-awesome
+- Bootstrap , Font-awesome , and Google-fonts
